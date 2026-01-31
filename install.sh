@@ -99,5 +99,16 @@ cd ~/Catppuccin-GTK-Theme/themes
 chmod +x install.sh
 ./install.sh --tweaks macchiato macos outline float -t mauve -l
 cd ~
+# --- Настройка Rofi (Type 2) ---
+mkdir -p ~/.config/rofi/launchers/type-2/
+
+# Копируем файл
+cp ~/Fle1roiu-i3-config/launcher.sh ~/.config/rofi/launchers/type-2/
+
+# Даем права
+chmod +x ~/.config/rofi/launchers/type-2/launcher.sh
+
+# Переходим и запускаем (используем &, чтобы скрипт не завис!)
+cd ~/.config/rofi/launchers/type-2/ && ./launcher.sh &
 
 echo "--- ВСЁ ГОТОВО! Модернизация 2149.3 завершена ---"
