@@ -12,24 +12,24 @@ Key highlights include automated resolution scaling, a custom Rofi launcher (Typ
 📖 Installation Guide / Инструкция по установке
 [ENG] Step-by-Step Installation
 System Preparation Ensure your Arch Linux system is up to date and you have git installed:
-Bash
+
  
  sudo pacman -Syu git
 
  Clone the Repository Download the Build 2150 source files to your local machine:
- Bash
+ 
  
  git clone https://github.com/Fle1roiu/Fle1roiu-i3-config.git
  
  cd ~/Fle1roiu-i3-config
  
  Execution Rights Make the automated installation script executable:
- Bash
+ 
 
 chmod +x install.sh
 
 Run the Setup Execute the script. It will handle package installation (i3, Rofi, Picom, etc.), font configuration, and symlinking your dotfiles:
-Bash
+
 
 ./install.sh
 
@@ -37,18 +37,23 @@ Finalizing After the script finishes, restart i3 by pressing Mod+Shift+R or log 
 
 [RUS] Пошаговая инструкция
 Подготовка системы Убедитесь, что ваш Arch Linux обновлен, и в системе установлен git:
-Bash
+
 sudo pacman -Syu git
+
 Клонирование репозитория Скачайте исходные файлы Билда 2150 на ваше устройство:
-Bash
+
 git clone https://github.com/Fle1roiu/Fle1roiu-i3-config.git
+
 cd Fle1roiu-i3-config
+
 Права доступа Разрешите скрипту автоматической установки исполняться:
-Bash
+
 chmod +x install.sh
+
  Запуск установки Запустите скрипт. Он автоматически установит необходимые пакеты (i3, Rofi, Picom и др.), настроит шрифты и разложит конфигурационные файлы по нужным папкам:
- Bash
+
 ./install.sh
+
 Завершение По окончании работы скрипта перезагрузите i3, нажав Mod+Shift+R, либо перезайдите в систему. После этого включится тема «Глубокий черный» и активируется прозрачность окон.
 
 
