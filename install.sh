@@ -113,4 +113,4 @@ cd ~/.config/rofi/launchers/type-2/ && ./launcher.sh &
 echo "--- Установка разрешения 1920x1080 ---"
 # Выставляем разрешение сразу
 xrandr --output Virtual-1 --mode 1920x1080 || xrandr --output eDP1 --mode 1920x1080 || xrandr --output HDMI-1 --mode 1920x1080
-echo "--- ВСЁ ГОТОВО! Модернизация 2149.4 завершена ---"
+echo "--- ВСЁ ГОТОВО! Модернизация 2150 завершена ---"
