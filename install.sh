@@ -79,13 +79,13 @@ cd ~
 
 echo "--- 4. Перенос файлов и конфигов (Финал) ---"
 # Создаем папки
-mkdir -p ~/Download
+mkdir -p ~/Downloads
 mkdir -p ~/.config/i3
 mkdir -p ~/.config/picom
 
 # Копируем обои
-cp ~/Fle1roiu-i3-config/linux.jpg ~/Download/
-cp ~/Fle1roiu-i3-config/linux.png ~/Download/
+cp ~/Fle1roiu-i3-config/linux.jpg ~/Downloads/
+cp ~/Fle1roiu-i3-config/linux.png ~/Downloads/
 
 # Копируем конфиги
 cp ~/Fle1roiu-i3-config/i3/config ~/.config/i3/config
