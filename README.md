@@ -1,12 +1,11 @@
 📝 Description / Описание:
+[ENG] Fle1roiu i3-config (Build 2150) — This is a meticulously crafted digital environment for those who value speed, minimalism, and a "Void-Black" aesthetic.
+Engineered for Arch Linux, this build strips away the bloat of traditional desktop environments, replacing it with a razor-sharp tiling workflow.
+Featuring ultra-low latency transparency and kernel-level memory optimization (zRAM-zstd), Build 2150 is designed to be accessible for beginners while providing the deep customization and performance required by professionals.
 
-[ENG] Fle1roiu i3-config (Build 2150) is a lightweight, high-performance tiling window manager setup based on i3wm for Arch Linux. 
-This build focuses on a "Deep Black" aesthetic, seamless transparency, and optimized system resources. It is designed to work perfectly on both physical hardware and virtual machines. 
-Key highlights include automated resolution scaling, a custom Rofi launcher (Type-2), and zRAM optimization with the zstd algorithm for superior multitasking.
-
-[RUS] Fle1roiu i3-config (Билд 2150) — это легковесная и высокопроизводительная сборка тайлингового оконного менеджера i3wm для Arch Linux. 
-Основной акцент сделан на эстетику «глубокого черного», плавную прозрачность и оптимизацию системных ресурсов. Сборка разработана для идеальной работы как на реальном железе, так и в виртуальных машинах. 
-Ключевые особенности включают автоматическую настройку разрешения, кастомный лаунчер Rofi (Type-2) и оптимизацию zRAM с алгоритмом zstd для эффективной работы с памятью.
+[RUS] Fle1roiu i3-config (Билд 2150) — Это тщательно проработанная цифровая среда для тех, кто ценит скорость, минимализм и эстетику «чистого вакуума».
+Созданная для Arch Linux, эта сборка отсекает всё лишнее, заменяя тяжелые интерфейсы молниеносным тайлинговым процессом.
+Благодаря оптимизированной прозрачности и оптимизации памяти на уровне ядра (zRAM-zstd), Билд 2150 разработан так, чтобы быть интуитивно понятным для новичков и при этом обеспечивать производительность, необходимую профессионалам.
 
 
 📖 Installation Guide / Инструкция по установке:
