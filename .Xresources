@@ -1,0 +1,6 @@
+xterm*background: #000000
+xterm*foreground: #ffffff
+xterm*faceName: Monospace
+xterm*faceSize: 12
+*.background: #000000
+*.foreground: #ffffff
