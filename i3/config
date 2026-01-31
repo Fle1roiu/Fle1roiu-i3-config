@@ -231,3 +231,4 @@ exec_always --no-startup-id plank
 exec --no-startup-id /usr/bin/VBoxClient-all
 # Автоматическое разрешение при старте
 exec_always --no-startup-id xrandr --output Virtual-1 --mode 1920x1080 --panning 1920x1080
+exec_always --no-startup-id xrdb ~/.Xresources
