@@ -97,7 +97,7 @@ rm -rf ~/Catppuccin-GTK-Theme
 git clone https://github.com/Fausto-Korpsvart/Catppuccin-GTK-Theme ~/Catppuccin-GTK-Theme
 cd ~/Catppuccin-GTK-Theme/themes
 chmod +x install.sh
-./install.sh
+./install.sh --tweaks macchiato macos outline float -t mauve -l
 cd ~
 
 echo "--- ВСЁ ГОТОВО! Модернизация 2149.3 завершена ---"
