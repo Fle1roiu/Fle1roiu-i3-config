@@ -44,7 +44,7 @@ sudo pacman -Syu git
 
 git clone https://github.com/Fle1roiu/Fle1roiu-i3-config.git
 
-cd Fle1roiu-i3-config
+cd ~/Fle1roiu-i3-config
 
 Права доступа Разрешите скрипту автоматической установки исполняться:
 
