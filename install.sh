@@ -1,14 +1,8 @@
 #!/bin/bash
 
-echo "--- 1. Копирование твоих личных конфигов ---"
-# Сначала переносим твои файлы, чтобы они уже были на месте
-mkdir -p ~/.config/i3
-cp -rf ~/Fle1roiu-i3-config/i3/config* ~/.config/i3/
-cp -f ~/Fle1roiu-i3-config/.Xresources ~/
-
-echo "--- 2. Поштучная установка пакетов (pacman) ---"
-# Твой список, каждая команда отдельно для контроля
+echo "--- 1. Поштучная установка пакетов (pacman) ---"
 sudo pacman -S --noconfirm alsa-utils
+sudo pacman -S --noconfirm arandr
 sudo pacman -S --noconfirm base
 sudo pacman -S --noconfirm base-devel
 sudo pacman -S --noconfirm cava
@@ -62,35 +56,48 @@ sudo pacman -S --noconfirm xss-lock
 sudo pacman -S --noconfirm xterm
 sudo pacman -S --noconfirm zram-generator
 
-echo "--- 3. Установка yay и Bibata ---"
+echo "--- 2. Установка yay и AUR пакетов ---"
 sudo pacman -Syu --noconfirm
 git clone https://aur.archlinux.org/yay.git ~/yay
-cd ~/yay
-makepkg -si --noconfirm
+cd ~/yay && makepkg -si --noconfirm
 cd ~
 yay -S --noconfirm bibata-cursor-theme-bin
 
-echo "--- 4. Установка тем (Papirus и Catppuccin) ---"
+echo "--- 3. Установка внешних тем (Papirus, Polybar, Rofi) ---"
 git clone https://github.com/PapirusDevelopmentTeam/papirus-icon-theme ~/papirus-icon-theme
 cd ~/papirus-icon-theme && chmod +x install.sh && ./install.sh
 cd ~
 
-git clone https://github.com/Fausto-Korpsvart/Catppuccin-GTK-Theme ~/Catppuccin-GTK-Theme
-cd ~/Catppuccin-GTK-Theme && chmod +x install.sh && ./install.sh --tweaks macchiato macos outline float -t mauve -l
-cd ~
-
-echo "--- 5. Темы Polybar и Rofi (adi1090x) ---"
-# Polybar
 git clone --depth=1 https://github.com/adi1090x/polybar-themes.git ~/polybar-themes
 cd ~/polybar-themes && chmod +x setup.sh && ./setup.sh
-cd ~
-# Запуск конкретного стиля
 bash ~/.config/polybar/launch.sh --shapes
 cd ~
 
-# Rofi
 git clone --depth=1 https://github.com/adi1090x/rofi.git ~/rofi-themes
 cd ~/rofi-themes && chmod +x setup.sh && ./setup.sh
 cd ~
 
-echo "--- УСТАНОВКА ЗАВЕРШЕНА ---"
+echo "--- 4. Перенос файлов и конфигов (Финал) ---"
+# Создаем папки
+mkdir -p ~/Download
+mkdir -p ~/.config/i3
+mkdir -p ~/.config/picom
+
+# Копируем обои
+cp ~/Fle1roiu-i3-config/linux.jpg ~/Download/
+cp ~/Fle1roiu-i3-config/linux.png ~/Download/
+
+# Копируем конфиги
+cp ~/Fle1roiu-i3-config/i3/config ~/.config/i3/config
+cp ~/Fle1roiu-i3-config/.Xresources ~/
+cp ~/Fle1roiu-i3-config/picom.conf ~/.config/picom/
+
+echo "--- 5. Повторная установка темы Catppuccin ---"
+rm -rf ~/Catppuccin-GTK-Theme
+git clone https://github.com/Fausto-Korpsvart/Catppuccin-GTK-Theme ~/Catppuccin-GTK-Theme
+cd ~/Catppuccin-GTK-Theme/themes
+chmod +x install.sh
+./install.sh
+cd ~
+
+echo "--- ВСЁ ГОТОВО! Модернизация 2149.3 завершена ---"
