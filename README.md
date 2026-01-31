@@ -1,4 +1,4 @@
-📝 Description / Описание
+📝 Description / Описание:
 
 [ENG] Fle1roiu i3-config (Build 2150) is a lightweight, high-performance tiling window manager setup based on i3wm for Arch Linux. 
 This build focuses on a "Deep Black" aesthetic, seamless transparency, and optimized system resources. It is designed to work perfectly on both physical hardware and virtual machines. 
@@ -9,7 +9,7 @@ Key highlights include automated resolution scaling, a custom Rofi launcher (Typ
 Ключевые особенности включают автоматическую настройку разрешения, кастомный лаунчер Rofi (Type-2) и оптимизацию zRAM с алгоритмом zstd для эффективной работы с памятью.
 
 
-📖 Installation Guide / Инструкция по установке
+📖 Installation Guide / Инструкция по установке:
 [ENG] Step-by-Step Installation
 System Preparation Ensure your Arch Linux system is up to date and you have git installed:
 
@@ -57,7 +57,7 @@ chmod +x install.sh
 Завершение По окончании работы скрипта перезагрузите i3, нажав Mod+Shift+R, либо перезайдите в систему. После этого включится тема «Глубокий черный» и активируется прозрачность окон.
 
 
-Screanshots/Скриншоты
+Screanshots/Скриншоты:
 
 
 ![Desktop_260131_1948](https://github.com/user-attachments/assets/43706470-7667-4781-a174-770c099254c9)
