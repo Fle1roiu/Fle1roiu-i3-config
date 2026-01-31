@@ -13,17 +13,26 @@ Key highlights include automated resolution scaling, a custom Rofi launcher (Typ
 [ENG] Step-by-Step Installation
 System Preparation Ensure your Arch Linux system is up to date and you have git installed:
 Bash
+ 
  sudo pacman -Syu git
+
  Clone the Repository Download the Build 2150 source files to your local machine:
  Bash
+ 
  git clone https://github.com/Fle1roiu/Fle1roiu-i3-config.git
+ 
  cd ~/Fle1roiu-i3-config
+ 
  Execution Rights Make the automated installation script executable:
  Bash
+
 chmod +x install.sh
+
 Run the Setup Execute the script. It will handle package installation (i3, Rofi, Picom, etc.), font configuration, and symlinking your dotfiles:
 Bash
+
 ./install.sh
+
 Finalizing After the script finishes, restart i3 by pressing Mod+Shift+R or log out and log back in to see the "Deep Black" aesthetic and transparency in action.
 
 [RUS] Пошаговая инструкция
