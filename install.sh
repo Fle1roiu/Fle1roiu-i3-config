@@ -35,7 +35,6 @@ cp ~/Fle1roiu-i3-config/Downloads/linux.png ~/Downloads/
 
 # Копируем конфиги
 cp ~/Fle1roiu-i3-config/i3/config ~/.config/i3/config
-cp ~/Fle1roiu-i3-config/.Xresources ~/
 cp ~/Fle1roiu-i3-config/picom.conf ~/.config/picom/
 
 cd ~
@@ -103,15 +102,22 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 echo "Тема загрузки успешно установлена!"
 
-#!/bin/bash
+
 
 echo "--- Начинаем установку 'Джентльменского набора' i3 ---"
+
+cd
 
 # 1. Установка пакетов через yay
 # Убираем старье (feh, i3lock, sddm, neofetch)
 # Ставим базу: i3lock-color, betterlockscreen, fastfetch, bc, imagemagick
 echo "Устанавливаю софт..."
-yay -S --needed --noconfirm i3lock-color betterlockscreen-git bc xorg-xprop xorg-xrandr
+
+yay -S betterlockscreen
+
+betterlockscreen -u ~/Downloads/linux.png blur 1
+
+
 
 # 2. Удаление SDDM и других мешающих менеджеров
 echo "Настраиваю чистый запуск без пароля..."
@@ -135,22 +141,32 @@ echo "exec i3" > "$HOME/.xinitrc"
 # 5. Первичная настройка Betterlockscreen (кеширование обоев)
 # Предполагаем, что твои обои лежат по этому пути:
 
-betterlockscreen -u ~/Downloads/linux.png --blur 1
 
 xrdb -merge ~/.Xresources  # Вот эта строка подтягивает цвета
 exec i3
 
+
+
 mkdir ~/.config/kitty/
 
+
+
 cp ~/Fle1roiu-i3-config/kitty.conf ~/.config/kitty/
+
+
 
 echo "-----------------------------------------------"
 echo "Установка завершена! Перезагружаюсь через 5 секунд..."
 sleep 5
 
+
 cp ~/Fle1roiu-i3-config/fastfetch.png ~/Downloads
+
+
 
 cp ~/Fle1roiu-i3-config/config.jsonc ~/.config/fastfetch/
 
-sudo reboot
+
+
+reboot
 
