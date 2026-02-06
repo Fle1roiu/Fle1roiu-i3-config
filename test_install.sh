@@ -2,14 +2,18 @@
 
 # --- 1. Установка пакетов (pacman) ---
 echo "Устанавливаю основные пакеты..."
-sudo pacman -S --noconfirm --needed zsh chafa kitty alsa-utils arandr base base-devel cava cmatrix fastfetch feh gnome-themes-extra iwd less lxappearance mc nano network-manager-applet otf-font-awesome pipewire-pulse polybar python-pillow python-pip rofi smartmontools sassc stow sudo thunar ttf-jetbrains-mono-nerd wget xdg-utils xorg-xinit xss-lock zram-generator qt6-svg qt6-virtualkeyboard qt6-multimedia-ffmpeg autotiling python-pywal
+sudo pacman -S --noconfirm --needed btop picom zsh chafa kitty alsa-utils arandr base base-devel cava cmatrix fastfetch feh gnome-themes-extra iwd less lxappearance mc nano network-manager-applet otf-font-awesome pipewire-pulse polybar python-pillow python-pip rofi smartmontools sassc stow sudo thunar ttf-jetbrains-mono-nerd wget xdg-utils xorg-xinit xss-lock zram-generator qt6-svg qt6-virtualkeyboard qt6-multimedia-ffmpeg autotiling python-pywal
 
 # --- 2. Установка yay и AUR пакетов ---
 echo "Устанавливаю yay и Bibata Cursor..."
 git clone https://aur.archlinux.org/yay.git ~/yay
 cd ~/yay && makepkg -si --noconfirm
 cd ~
-yay -S --noconfirm bibata-cursor-theme-bin picom-ftlabs-git plymouth betterlockscreen-git i3lock-color
+yay -S bibata-cursor-theme-bin 
+yay -S picom-ftlabs-git
+yay -S plymouth 
+yay -S betterlockscreen 
+yay -S i3lock-color
 
 # --- 3. Установка внешних тем ---
 echo "Устанавливаю темы и иконки..."
