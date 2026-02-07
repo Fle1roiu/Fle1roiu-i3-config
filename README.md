@@ -110,6 +110,44 @@ ___
 
 ___
 
+## 🎨 Themes & Customization / Темы и Кастомизация
+
+### 🇺🇸 English Instructions
+
+#### 🖼 How to set Wallpaper
+The system uses **Pywal** to sync your terminal and UI colors with your wallpaper.
+1. Place your desired image in the `~/Downloads/` directory.
+2. **Crucial:** Rename the file to `linux.png` (path: `~/Downloads/linux.png`).
+3. Run `wal -i ~/Downloads/linux.png` to refresh colors instantly, or simply run the `setup.sh` script.
+
+#### ✨ How to activate Themes
+* **Terminal (Zsh):** The **Kali-like** theme is activated automatically.
+* **GTK/Icons/Cursors:**
+    1. Open the application menu (`Mod+D`).
+    2. Launch `lxappearance`.
+    3. Manually select **Papirus** (Icons) and **Bibata** (Cursor).
+    4. Click **Apply**.
+
+---
+
+### 🇷🇺 Инструкция на русском
+
+#### 🖼 Как установить обои
+Система использует **Pywal** для синхронизации цветов терминала и интерфейса с вашими обоями.
+1. Поместите выбранное изображение в папку `~/Downloads/`.
+2. **Важно:** Переименуйте файл в `linux.png` (путь: `~/Downloads/linux.png`).
+3. Выполните команду `wal -i ~/Downloads/linux.png` для мгновенного обновления цветов или просто запустите `setup.sh`.
+
+#### ✨ Как активировать темы
+* **Терминал (Zsh):** Тема **Kali-like** активируется автоматически при запуске.
+* **GTK/Иконки/Курсоры:**
+    1. Откройте меню приложений (`Mod+D`).
+    2. Запустите `lxappearance`.
+    3. Вручную выберите **Papirus** (Иконки) и **Bibata** (Курсор).
+    4. Нажмите **Apply (Применить)**.
+
+___
+
 ### **👤 Author / Автор**
 
 **EN:** Created and maintained by **Fle1roiu**.
