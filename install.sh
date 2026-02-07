@@ -86,6 +86,29 @@ echo "Генерирую цвета и кэш экрана блокировки.
 wal -i ~/Downloads/linux.png -b 000000
 betterlockscreen -u ~/Downloads/linux.png --blur 1
 
+echo "--- Чистая установка ZSH и темы Kali-Like ---"
+
+# 1. Ставим Zsh
+sudo pacman -S --noconfirm zsh wget curl git ttf-fira-code
+
+# 2. Ставим Oh My Zsh в автоматическом режиме (без запросов)
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+
+# 3. Качаем тему Kali-Like
+wget -O ~/.oh-my-zsh/themes/kali-like.zsh-theme https://raw.githubusercontent.com/clamy54/kali-like-zsh-theme/master/kali-like.zsh-theme
+
+# 4. Создаем ПРАВИЛЬНЫЙ .zshrc (записываем всё заново)
+cat <<EOF > ~/.zshrc
+export ZSH="\$HOME/.oh-my-zsh"
+ZSH_THEME="kali-like"
+# Плагины (они уже встроены в тему kali-like)
+plugins=(git)
+source \$ZSH/oh-my-zsh.sh
+EOF
+
+# 5. Делаем Zsh оболочкой по умолчанию (через usermod для надежности)
+sudo usermod -s /usr/bin/zsh $USER
+
 echo "-----------------------------------------------"
 echo "Установка завершена! Система перезагрузится через 5 секунд."
 sleep 5
