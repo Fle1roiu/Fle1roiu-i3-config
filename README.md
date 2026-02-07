@@ -128,7 +128,7 @@ The system uses **Pywal** to sync your terminal and UI colors with your wallpape
     3. Manually select **Papirus** (Icons) and **Bibata** (Cursor).
     4. Click **Apply**.
 
----
+
 
 ### 🇷🇺 Инструкция на русском
 
@@ -150,7 +150,7 @@ ___
 
 # 🖥 Screen Resolution Setup / Настройка разрешения экрана
 
----
+
 
 ### 🇺🇸 English
 To change your screen resolution manually and ensure it stays after a reboot:
@@ -171,7 +171,7 @@ To change your screen resolution manually and ensure it stays after a reboot:
     exec_always --no-startup-id xrandr --output <monitor_name> --mode <width>x<height>
     ```
 
----
+
 
 ### 🇷🇺 Русский
 Инструкция по ручному изменению разрешения и настройке автозапуска:
