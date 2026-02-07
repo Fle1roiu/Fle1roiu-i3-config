@@ -86,25 +86,35 @@ echo "Генерирую цвета и кэш экрана блокировки.
 wal -i ~/Downloads/linux.png -b 000000
 betterlockscreen -u ~/Downloads/linux.png --blur 1
 
+# --- 8. Установка ZSH и темы Kali-Like ---
 echo "--- Чистая установка ZSH и темы Kali-Like ---"
 
-# 1. Ставим Zsh
+# Убеждаемся, что старые конфиги не помешают
+rm -rf ~/.oh-my-zsh ~/.zshrc
+
+# 1. Ставим Zsh и зависимости
 sudo pacman -S --noconfirm zsh wget curl git ttf-fira-code
 
-# 2. Ставим Oh My Zsh в автоматическом режиме (без запросов)
+# 2. Ставим Oh My Zsh в автоматическом режиме
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
 # 3. Качаем тему Kali-Like
 wget -O ~/.oh-my-zsh/themes/kali-like.zsh-theme https://raw.githubusercontent.com/clamy54/kali-like-zsh-theme/master/kali-like.zsh-theme
 
-# 4. Создаем ПРАВИЛЬНЫЙ .zshrc (записываем всё заново)
-cat <<EOF > ~/.zshrc
-export ZSH="\$HOME/.oh-my-zsh"
+# 4. Создаем ПРАВИЛЬНЫЙ .zshrc
+# Используем кавычки вокруг "EOF", чтобы переменные внутри НЕ раскрывались раньше времени
+cat << "EOF" > ~/.zshrc
+export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="kali-like"
-# Плагины (они уже встроены в тему kali-like)
 plugins=(git)
-source \$ZSH/oh-my-zsh.sh
+source $ZSH/oh-my-zsh.sh
 EOF
+
+# 5. Делаем Zsh оболочкой по умолчанию
+sudo usermod -s /usr/bin/zsh $USER
+
+# Исправляем возможную ошибку с правами на историю
+touch ~/.zsh_history
 
 # 5. Делаем Zsh оболочкой по умолчанию (через usermod для надежности)
 sudo usermod -s /usr/bin/zsh $USER
