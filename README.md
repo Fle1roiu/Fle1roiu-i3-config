@@ -148,6 +148,52 @@ The system uses **Pywal** to sync your terminal and UI colors with your wallpape
 
 ___
 
+# 🖥 Screen Resolution Setup / Настройка разрешения экрана
+
+---
+
+### 🇺🇸 English
+To change your screen resolution manually and ensure it stays after a reboot:
+
+* **Step 1: Find your monitor name**
+    Run `xrandr` in the terminal. Look for the connected device (e.g., **eDP-1**, **HDMI-1**, or **DP-1**).
+* **Step 2: Apply resolution**
+    Run the following command:
+    `xrandr --output <monitor_name> --mode <width>x<height>`
+* **Step 3: Create a CUSTOM resolution (If your resolution is missing)**
+    1.  Generate timings: `cvt 1440 900 60`
+    2.  Create new mode: `xrandr --newmode "1440x900" <paste_everything_after_modeline_from_cvt_output>`
+    3.  Add mode to monitor: `xrandr --addmode <monitor_name> "1440x900"`
+    4.  Apply it: `xrandr --output <monitor_name> --mode 1440x900`
+* **Step 4: Set Auto-start (Permanent)**
+    Add this line to your `~/.config/i3/config` file:
+    ```bash
+    exec_always --no-startup-id xrandr --output <monitor_name> --mode <width>x<height>
+    ```
+
+---
+
+### 🇷🇺 Русский
+Инструкция по ручному изменению разрешения и настройке автозапуска:
+
+* **Шаг 1: Узнать имя монитора**
+    Введите `xrandr` в терминале. Найдите активный выход (например, **eDP-1**, **HDMI-1** или **DP-1**).
+* **Шаг 2: Установить разрешение**
+    Введите команду:
+    `xrandr --output <имя_монитора> --mode <ширина>x<высота>`
+* **Шаг 3: Создать КАСТОМНОЕ разрешение (Если нужного нет в списке)**
+    1.  Генерируем тайминги: `cvt 1440 900 60`
+    2.  Создаем новый режим: `xrandr --newmode "1440x900" <вставьте_текст_из_команды_cvt_после_слова_modeline>`
+    3.  Привязываем режим к монитору: `xrandr --addmode <имя_монитора> "1440x900"`
+    4.  Применяем: `xrandr --output <имя_монитора> --mode 1440x900`
+* **Шаг 4: Настройка автозапуска (Навсегда)**
+    Добавьте эту строку в ваш файл конфига `~/.config/i3/config`:
+    ```bash
+    exec_always --no-startup-id xrandr --output <имя_монитора> --mode <ширина>x<высота>
+    ```
+
+---
+
 ### **👤 Author / Автор**
 
 **EN:** Created and maintained by **Fle1roiu**.
