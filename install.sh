@@ -49,9 +49,9 @@ case $choice in
         ./install.sh
         ;;
     3)
-        echo -e "\n[?] Скрипт для Ubuntu в разработке..."
-        sleep 2
-        ./install.sh
+        echo -e "\n[?] Запуск скрипта для Ubuntu..."
+        chmod +x ubuntu.sh
+        ./ubuntu.sh
         ;;
     4)
         echo "Выход..."
