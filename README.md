@@ -8,13 +8,6 @@
 
 ---
 
-> [!NOTE]
-> **EN:** This configuration is currently designed **only for Arch Linux**. Support for other distributions is not guaranteed.
->
-> **RU:** На данный момент этот конфиг предназначен **только для Arch Linux**. Работа на других дистрибутивах не гарантируется.
-
----
-
 ## **⌨️ Main Bindings / Основные клавиши**
 
 * <kbd>Super</kbd> + <kbd>Enter</kbd> — Open terminal / Открыть терминал
