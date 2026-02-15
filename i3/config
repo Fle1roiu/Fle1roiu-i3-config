@@ -254,3 +254,6 @@ exec --no-startup-id betterlockscreen -l blur
 bindsym Mod1+l exec betterlockscreen -l blur
 
 exec_always --no-startup-id xrdb -merge ~/.Xresources
+
+# Делаем Kitty плавающим и задаем ему размер сразу
+for_window [class="kitty"] floating enable, resize set 800 500, move position center
